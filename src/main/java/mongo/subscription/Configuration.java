@@ -13,6 +13,7 @@ public class Configuration {
     private String databaseHost;
     private int databasePort;
     private String databaseName;
+    private int messagesCount;
 
     private final List<String> sourceAliases = new ArrayList<>();
 
@@ -28,6 +29,11 @@ public class Configuration {
 
     public Configuration setDatabaseName(String databaseName) {
         this.databaseName = databaseName;
+        return this;
+    }
+
+    public Configuration setMessagesCount(int messagesCount) {
+        this.messagesCount = messagesCount;
         return this;
     }
 
@@ -47,6 +53,10 @@ public class Configuration {
 
     public String getDatabaseName() {
         return databaseName;
+    }
+
+    public int getMessagesCount() {
+        return messagesCount;
     }
 
     public List<String> getSourceAliases() {
